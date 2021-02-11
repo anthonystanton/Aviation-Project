@@ -1,0 +1,75 @@
+.container {
+  width: 90%;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-dark);
+  margin: 3rem auto;
+  @include respond(largest) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.header {
+  width: 100%;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-grey-light-2);
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  @include respond(medium) {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-grey-dark-1);
+}
+
+.main-hotel {
+  flex: 1;
+}
+.detail {
+  display: flex;
+  padding: 4rem;
+  font-size: 1.4rem;
+  background: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-grey-light-2);
+  @include respond(medium) {
+    padding: 2rem;
+  }
+  @include respond(small) {
+    flex-direction: column;
+  }
+  @include respond(smallest) {
+    flex-direction: column;
+  }
+}
+.description {
+  background-color: var(--color-white);
+  flex: 0 0 50%;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  @include respond(medium) {
+    margin-right: 2rem;
+  }
+  @include respond(small) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

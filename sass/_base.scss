@@ -1,0 +1,88 @@
+:root {
+  --color-white: #fff;
+  --color-black: 0, 0, 0;
+
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --alpha-light: 0.25;
+  --alpha-medium: 0.5;
+  --alpha-dark: 0.75;
+
+  --shadow-dark: 0 3rem 6rem rgba(var(--color-black), var(--alpha-dark));
+  --shadow-medium: 0 3rem 6rem rgba(var(--color-black), var(--alpha-medium));
+  --shadow-light: 0 3rem 6rem rgba(var(--color-black), var(--alpha-light));
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == largest {
+    @media only screen and (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media only screen and (max-width: 62.5em) {
+      //1000px
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breakpoint == smallest {
+    @media only screen and (max-width: 28.75em) {
+      //460px
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //font size = 10px = 1rem
+  box-sizing: border-box;
+  @include respond(large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  line-height: 1.7;
+  font-family: "Open sans", sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  // background-size: cover;
+  color: var(--color-grey-dark-2);
+  font-weight: 400;
+  background-repeat: no-repeat;
+}
