@@ -6,7 +6,7 @@ Desktop first, single-page. Made using HTML and SASS. Mainly focused on using di
 **Desktop first, single-page website**
 
 * Developed using HTML and SASS
-* Mainly focused on the featurs of flexbox and used thoroughly across the design
+* Mainly focused on the features of flexbox and used thoroughly across the design
 * Responsive design used throughout
 * Used breakpoints specifically for when the site starts to break
 * Aimed to build a website that uses reusable code
